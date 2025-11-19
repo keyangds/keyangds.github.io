@@ -242,3 +242,91 @@
   }
 }
 
+/* Dark Mode Overrides */
+html[data-theme="dark"] .publication-search {
+  background: #1d1f27;
+  border-color: #2c3040;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .publication-search__title,
+html[data-theme="dark"] .publication-topics__title {
+  color: #a0a4b8;
+}
+
+html[data-theme="dark"] .publication-search__field input {
+  background: #252a3a;
+  color: #e4e7f5;
+}
+
+html[data-theme="dark"] .publication-search__field input:focus {
+  background: #2c3040;
+  box-shadow: 0 0 0 2px rgba(75, 108, 255, 0.4);
+}
+
+html[data-theme="dark"] .topic-chip {
+  background: #252a3a;
+  border-color: #373c4f;
+  color: #c8cce0;
+}
+
+html[data-theme="dark"] .topic-chip.is-active {
+  background: #4b6cff;
+  border-color: #4b6cff;
+  color: #fff;
+}
+
+html[data-theme="dark"] .publication-search__clear {
+  color: #8d94b0;
+}
+
+html[data-theme="dark"] .publication-empty {
+  border-color: #373c4f;
+  color: #8d94b0;
+}
+
+html[data-theme="dark"] .publication-card {
+  background: #1d1f27;
+  border-color: #2c3040;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme="dark"] .publication-card__media img {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: #252a3a;
+}
+
+html[data-theme="dark"] .publication-card__media--empty {
+  border-color: #373c4f;
+  color: #606580;
+}
+
+html[data-theme="dark"] .publication-card__info {
+  color: #a0a4b8;
+}
+
+html[data-theme="dark"] .publication-card__category {
+  border-color: #373c4f;
+}
+
+html[data-theme="dark"] .publication-card__title a {
+  color: #6e8cff;
+}
+
+html[data-theme="dark"] .publication-card__authors {
+  color: #e4e7f5;
+}
+
+html[data-theme="dark"] .publication-card__summary {
+  color: #b0b4c8;
+}
+
+html[data-theme="dark"] .publication-card__links a {
+  border-color: #6e8cff;
+  color: #6e8cff;
+}
+
+html[data-theme="dark"] .publication-card__links a:hover {
+  background-color: #6e8cff;
+  color: #fff;
+}
