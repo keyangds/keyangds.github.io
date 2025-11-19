@@ -1,0 +1,165 @@
+{% include base_path %}
+
+{% if post.header.teaser %}
+  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% else %}
+  {% assign teaser = site.teaser %}
+{% endif %}
+
+{% if post.id %}
+  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+  {% assign title = post.title %}
+{% endif %}
+
+{% assign display_topics = nil %}
+{% assign normalized_topics = "" %}
+{% if post.collection == 'publications' %}
+  {% if post.topics %}
+    {% assign display_topics = post.topics %}
+  {% elsif post.tags %}
+    {% assign display_topics = post.tags %}
+  {% endif %}
+  {% if display_topics %}
+    {% assign normalized_topics = display_topics | join: '|' | downcase %}
+  {% endif %}
+{% endif %}
+
+<div class="{{ include.type | default: "list" }}__item"{% if post.collection == 'publications' %} data-publication-row{% endif %}>
+  <article class="archive__item {% if post.collection == 'publications' %}publication-card{% endif %}"
+           itemscope
+           itemtype="http://schema.org/CreativeWork"
+           {% if post.collection == 'publications' %}
+             data-publication-item
+             {% if normalized_topics != "" %}
+               data-topics="{{ normalized_topics | escape }}"
+             {% endif %}
+           {% endif %}>
+    {% if post.collection == 'publications' %}
+      {% capture primary_link %}
+        {% if post.paperurl %}
+          {{ post.paperurl }}
+        {% elsif post.projecturl %}
+          {{ post.projecturl }}
+        {% elsif post.codeurl %}
+          {{ post.codeurl }}
+        {% else %}
+          {{ base_path }}{{ post.url }}
+        {% endif %}
+      {% endcapture %}
+
+      {% assign card_teaser = post.figure | default: post.thumbnail | default: post.header.teaser %}
+      <div class="publication-card__media">
+        {% if card_teaser %}
+          {% assign teaser_src = card_teaser | strip %}
+          {% if teaser_src contains '://' %}
+            {% assign teaser_url = teaser_src %}
+          {% else %}
+            {% assign teaser_first_char = teaser_src | slice: 0, 1 %}
+            {% if teaser_first_char == '/' %}
+              {% assign teaser_path = teaser_src %}
+            {% elsif teaser_src contains '/' %}
+              {% assign teaser_path = "/" | append: teaser_src %}
+            {% else %}
+              {% assign teaser_path = "/images/" | append: teaser_src %}
+            {% endif %}
+            {% assign teaser_url = teaser_path | prepend: base_path %}
+          {% endif %}
+          <img src="{{ teaser_url }}" alt="{{ title }}">
+        {% else %}
+          <div class="publication-card__media--empty">
+            <span>{{ post.venue | default: "Publication" }}</span>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="publication-card__content">
+        <div class="publication-card__info">
+          {% if post.venue %}
+            <span class="publication-card__venue">{{ post.venue }}</span>
+          {% endif %}
+          {% if post.category %}
+            <span class="publication-card__category">{{ post.category }}</span>
+          {% endif %}
+        </div>
+
+        <h3 class="publication-card__title">
+          <a href="{{ primary_link | strip }}"{% if post.paperurl or post.projecturl or post.codeurl %} target="_blank" rel="noopener"{% endif %}>{{ title }}</a>
+        </h3>
+
+        {% if post.authors %}
+          {% assign highlighted_authors = post.authors
+            | replace: 'Keyang Xuan', '<strong>Keyang Xuan</strong>'
+            | replace: 'keyang xuan', '<strong>keyang xuan</strong>' %}
+          {% assign starred_authors = highlighted_authors
+            | replace: '*', '<sup class="author-marker">*</sup>' %}
+          {% assign authors_markup = starred_authors
+            | markdownify
+            | strip_newlines
+            | replace: '<p>', ''
+            | replace: '</p>', '' %}
+          <p class="publication-card__authors">{{ authors_markup | strip }}</p>
+        {% endif %}
+
+        {% if post.summary %}
+          <p class="publication-card__summary">{{ post.summary }}</p>
+        {% elsif post.excerpt %}
+          <p class="publication-card__summary">{{ post.excerpt | markdownify | strip_html }}</p>
+        {% endif %}
+
+        <div class="publication-card__links">
+          {% if post.projecturl %}
+            <a href="{{ post.projecturl }}" target="_blank" rel="noopener">project</a>
+          {% endif %}
+          {% if post.codeurl %}
+            <a href="{{ post.codeurl }}" target="_blank" rel="noopener">code</a>
+          {% endif %}
+          {% if post.slidesurl %}
+            <a href="{{ post.slidesurl }}" target="_blank" rel="noopener">slides</a>
+          {% endif %}
+          {% if post.demo %}
+            <a href="{{ post.demo }}" target="_blank" rel="noopener">demo</a>
+          {% endif %}
+        </div>
+
+      </div>
+    {% else %}
+      {% if include.type == "grid" and teaser %}
+        <div class="archive__item-teaser">
+          <img src=
+            {% if teaser contains "://" %}
+              "{{ teaser }}"
+            {% else %}
+              "{{ teaser | prepend: "/images/" | prepend: base_path }}"
+            {% endif %}
+            alt="">
+        </div>
+      {% endif %}
+
+      <h2 class="archive__item-title" itemprop="headline">
+        {% if post.link %}
+          <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        {% else %}
+          <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+        {% endif %}
+      </h2>
+      
+      {% if post.read_time %}
+        <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+      {% endif %}
+
+      {% if post.collection == 'teaching' %}
+        <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
+      {% elsif post.date %}
+       <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Published:" }}</strong> <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+      {% endif %}
+
+      {% if post.excerpt and site.read_more != 'enabled' %}
+      <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
+      {% elsif post.excerpt and site.read_more == 'enabled' %}
+      <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
+      {% endif %}
+    {% endif %}
+
+  </article>
+</div>

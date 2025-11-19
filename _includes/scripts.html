@@ -1,0 +1,11 @@
+<script type="module" src="{{ base_path }}/assets/js/main.min.js"></script>
+
+{% if page.uses_publications_assets %}
+<script src="{{ base_path }}/assets/js/publications.js" defer></script>
+{% endif %}
+
+{% if page.uses_news_assets %}
+<script src="{{ base_path }}/assets/js/news.js" defer></script>
+{% endif %}
+
+{% include analytics.html %}
