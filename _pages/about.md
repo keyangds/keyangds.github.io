@@ -15,12 +15,6 @@ Before UIUC, I spent wonderful four years in University of Minnesota, where I am
 
 I’m always enthusiastic about collaborating with researchers from diverse fields. If you’re interested in working together, please don’t hesitate to reach out.
 
-<div style="margin: 1.5rem 0;">
-  <a href="https://twitter.com/{{ site.author.twitter }}" class="twitter-follow-btn" target="_blank" rel="noopener noreferrer">
-    <i class="fab fa-x-twitter"></i>
-    <span>Follow @{{ site.author.twitter }}</span>
-  </a>
-</div>
 
 <h2 class="section-heading">
   <span class="section-heading-icon" aria-hidden="true">
