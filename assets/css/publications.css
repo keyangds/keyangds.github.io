@@ -88,9 +88,10 @@
   color: #5a5e78;
   font-size: 0.8rem;
   font-weight: 600;
-  margin-left: auto;
+  margin-left: 0.5rem;
   cursor: pointer;
   text-decoration: underline;
+  white-space: nowrap;
 }
 .publication-empty {
   margin-bottom: 1rem;

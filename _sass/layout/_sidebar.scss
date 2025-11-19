@@ -116,6 +116,7 @@
     width: 100%;
     padding-left: 0;
     padding-right: 0;
+    margin-bottom: 20px;
   }
 }
 
@@ -124,7 +125,7 @@
 
   @include breakpoint($large) {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 }
 .sidebar .author__name {
