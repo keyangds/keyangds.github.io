@@ -9,9 +9,9 @@ redirect_from:
   - /about.html
 ---
 
-My name is Keyang Xuan and I'm a graduate student at Siebel School of Computing and Data Science, University of Illinois Urbana-Champaign, advised by [Jiaxuan You](https://cs.stanford.edu/people/jiaxuan/). My research generally revolves around building intelligent agents with social and collaborative intelligence. I build computational frameworks that enable language agents to **facilitate scientific discovery**, **adapt to complex social interactions**, and **operate under efficiency and safety constraints**.
+My name is Keyang Xuan and I'm a graduate student at Siebel School of Computing and Data Science, University of Illinois Urbana-Champaign, advised by Prof.[Jiaxuan You](https://cs.stanford.edu/people/jiaxuan/). I am also fortunate to work with Prof.[Tal August](https://talaugust.github.io/). My research generally revolves around building intelligent agents with social and collaborative intelligence. In particular, I develop computational frameworks that enable language agents to **facilitate scientific discovery**, **adapt to complex social interactions**, and **operate under efficiency and safety constraints**.
 
-Before UIUC, I spent wonderful four years in University of Minnesota, where I am forunate to worked with [Vipin Kumar](https://scholar.google.com/citations?user=BnxU9TEAAAAJ&hl=en) and [Kangjie Lu](https://www-users.cse.umn.edu/~kjlu/).
+Before joining UIUC, I spent four wonderful years at the University of Minnesota, where I was fortunate to work with Prof.[Vipin Kumar](https://scholar.google.com/citations?user=BnxU9TEAAAAJ&hl=en) and Prof.[Kangjie Lu](https://www-users.cse.umn.edu/~kjlu/).
 
 I’m always enthusiastic about collaborating with researchers from diverse fields. If you’re interested in working together, please don’t hesitate to reach out.
 
