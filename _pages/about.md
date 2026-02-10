@@ -74,7 +74,7 @@ coordinate, both with humans and among themselves, to accomplish complex, real-w
 
 {% include base_path %}
 
-{% assign topic_options = "Auto Research|Social Intelligence|Multi-Agent Systems|LLM Applications" | split: "|" %}
+{% assign topic_options = "Auto Research|Social Intelligence|Multi-Agent Systems|LLM Applications|Alignment" | split: "|" %}
 
 <div class="publications-panel">
   <div class="publication-search">
