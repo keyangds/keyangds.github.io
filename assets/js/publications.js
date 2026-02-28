@@ -9,46 +9,52 @@
 
   ready(function () {
     const searchInput = document.querySelector('[data-publications-search]');
-    const topicChips = document.querySelectorAll('[data-topic-chip]');
-    const clearButton = document.querySelector('[data-clear-topics]');
+    const allChips = document.querySelectorAll('[data-topic-chip]');
+    const allChip = document.querySelector('[data-topic-chip][data-topic="all"]');
+    const topicChips = document.querySelectorAll('[data-topic-chip]:not([data-topic="all"])');
     const publicationRows = document.querySelectorAll('[data-publication-row]');
     const emptyState = document.querySelector('[data-publications-empty]');
     const selectedTopics = new Set();
 
     function normalizeTopics(value) {
-      if (!value) {
-        return [];
-      }
-
-      return value
-        .split('|')
-        .map((topic) => topic.trim())
-        .filter(Boolean);
+      if (!value) return [];
+      return value.split('|').map(function (t) { return t.trim(); }).filter(Boolean);
     }
 
     function matchesSelectedTopics(topics) {
-      if (selectedTopics.size === 0) {
-        return true;
+      if (selectedTopics.size === 0) return true;
+      return [...selectedTopics].some(function (topic) { return topics.includes(topic); });
+    }
+
+    function syncChipStates() {
+      if (selectedTopics.size === 0 && allChip) {
+        allChip.classList.add('is-active');
+      } else if (allChip) {
+        allChip.classList.remove('is-active');
       }
 
-      return [...selectedTopics].every((topic) => topics.includes(topic));
+      topicChips.forEach(function (chip) {
+        if (selectedTopics.has(chip.dataset.topic)) {
+          chip.classList.add('is-active');
+        } else {
+          chip.classList.remove('is-active');
+        }
+      });
     }
 
     function applyFilters() {
-      const query = (searchInput?.value || '').trim().toLowerCase();
-      let visibleCount = 0;
+      var query = (searchInput ? searchInput.value : '').trim().toLowerCase();
+      var visibleCount = 0;
 
-      publicationRows.forEach((row) => {
-        const article = row.querySelector('[data-publication-item]');
-        if (!article) {
-          return;
-        }
+      publicationRows.forEach(function (row) {
+        var article = row.querySelector('[data-publication-item]');
+        if (!article) return;
 
-        const textContent = article.textContent.toLowerCase();
-        const topics = normalizeTopics(article.dataset.topics);
+        var textContent = article.textContent.toLowerCase();
+        var topics = normalizeTopics(article.dataset.topics);
 
-        const queryMatches = !query || textContent.includes(query);
-        const topicMatches = matchesSelectedTopics(topics);
+        var queryMatches = !query || textContent.includes(query);
+        var topicMatches = matchesSelectedTopics(topics);
 
         if (queryMatches && topicMatches) {
           row.style.removeProperty('display');
@@ -63,39 +69,37 @@
       }
     }
 
-    topicChips.forEach((chip) => {
-      chip.addEventListener('click', () => {
-        const topic = chip.dataset.topic;
-        if (!topic) {
-          return;
-        }
+    if (allChip) {
+      allChip.addEventListener('click', function () {
+        selectedTopics.clear();
+        syncChipStates();
+        applyFilters();
+      });
+    }
+
+    topicChips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        var topic = chip.dataset.topic;
+        if (!topic) return;
 
         if (selectedTopics.has(topic)) {
           selectedTopics.delete(topic);
-          chip.classList.remove('is-active');
         } else {
           selectedTopics.add(topic);
-          chip.classList.add('is-active');
         }
 
+        syncChipStates();
         applyFilters();
       });
     });
 
-    clearButton?.addEventListener('click', () => {
-      selectedTopics.clear();
-      topicChips.forEach((chip) => chip.classList.remove('is-active'));
-      if (searchInput) {
-        searchInput.value = '';
-      }
-      applyFilters();
-    });
+    if (searchInput) {
+      searchInput.addEventListener('input', function () {
+        applyFilters();
+      });
+    }
 
-    searchInput?.addEventListener('input', () => {
-      applyFilters();
-    });
-
+    syncChipStates();
     applyFilters();
   });
 })();
-

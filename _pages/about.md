@@ -77,39 +77,25 @@ coordinate, both with humans and among themselves, to accomplish complex, real-w
 {% assign topic_options = "Auto Research|Social Intelligence|Multi-Agent Systems|LLM Applications|Alignment" | split: "|" %}
 
 <div class="publications-panel">
-  <div class="publication-search">
-    <div class="publication-search__row">
-      <span class="publication-search__title">Search</span>
-      <div class="publication-search__field">
-        <input
-          type="search"
-          id="publication-search-input"
-          placeholder="title, venue, or keyword"
-          data-publications-search
-        />
-      </div>
-      <button type="button" class="publication-search__clear" data-clear-topics>Clear filters</button>
+  <div class="publication-filters">
+    <div class="publication-filters__search">
+      <svg class="publication-filters__search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd"/></svg>
+      <input
+        type="search"
+        id="publication-search-input"
+        placeholder="Search by title or tag..."
+        data-publications-search
+      />
     </div>
-    {% if topic_options and topic_options.size > 0 %}
-      <div class="publication-topics">
-        <span class="publication-topics__title">Filter by topics</span>
-        <div class="publication-topics__chips">
-          {% for topic in topic_options %}
-            {% assign topic_label = topic | strip %}
-            {% if topic_label != "" %}
-              <button
-                type="button"
-                class="topic-chip"
-                data-topic="{{ topic_label | downcase }}"
-                data-topic-chip
-              >
-                {{ topic_label }}
-              </button>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-    {% endif %}
+    <div class="publication-filters__chips">
+      <button type="button" class="filter-chip is-active" data-topic="all" data-topic-chip>All</button>
+      {% for topic in topic_options %}
+        {% assign topic_label = topic | strip %}
+        {% if topic_label != "" %}
+          <button type="button" class="filter-chip" data-topic="{{ topic_label | downcase }}" data-topic-chip>{{ topic_label }}</button>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 
   <div class="publication-empty" data-publications-empty hidden>
