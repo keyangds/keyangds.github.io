@@ -13,6 +13,8 @@ My name is Keyang Xuan and I'm a graduate student at Siebel School of Computing 
 
 Before joining UIUC, I spent four wonderful years at the University of Minnesota, where I was fortunate to work with Prof.[Vipin Kumar](https://scholar.google.com/citations?user=BnxU9TEAAAAJ&hl=en) and Prof.[Kangjie Lu](https://www-users.cse.umn.edu/~kjlu/).
 
+Starting from Fall 2026, I will join UT Austin as a CS PhD student, co-advsied by Prof.[Yizhong Wang](https://yizhong-wang.com/) and Prof.[Jiaxin Pei](https://jiaxin-pei.github.io/)
+
 I’m always enthusiastic about collaborating with researchers from diverse fields. If you’re interested in working together, please don’t hesitate to reach out.
 
 
