@@ -1,6 +1,6 @@
 ---
 - date: 2026-05
-  summary: "✨ New paper released: <a href='https://arxiv.org/abs/2605.17829' style='color: #1e6bb8;'>Interactive Evaluation Requires a Design Science</a>. We argue that interactive evaluation needs a design science to make agent benchmarks interpretable and comparable."
+  summary: "✨ New paper released: <a href='https://arxiv.org/abs/2605.17829' style='color: #1e6bb8;'>Interactive Evaluation Requires a Design Science</a>. We argue that interactive evaluation needs explicit principles for mapping trajectory artifacts to evaluative judgments."
 - date: 2026-03
   summary: "I will be joining **UT Austin** as a CS PhD student in Fall 2026."
 - date: 2025-12
