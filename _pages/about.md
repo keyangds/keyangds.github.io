@@ -105,7 +105,8 @@ coordinate, both with humans and among themselves, to accomplish complex, real-w
   </div>
 
   <div class="publications-list">
-    {% for post in site.publications reversed %}
+    {% assign sorted_publications = site.publications | sort: 'order' %}
+    {% for post in sorted_publications %}
       {% include archive-single.html %}
     {% endfor %}
   </div>

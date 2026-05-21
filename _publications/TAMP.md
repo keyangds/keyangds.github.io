@@ -1,5 +1,6 @@
 ---
 title: "TAMP: Token Adaptive Layerwise Pruning in Multimodal Large Language Models"
+order: 7
 authors: Jaewoo Lee, Keyang Xuan, Chanakya Ekbote, Sandeep Polisetty, May Fung, Paul Pu Liang
 venue: "ACL 2025 (Findings)"
 paperurl: "https://arxiv.org/pdf/2504.09897"

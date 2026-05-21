@@ -1,5 +1,6 @@
 ---
 title: "TinyScientist: An Interactive, Extensible, and Controllable Framework for Building Research Agents"
+order: 5
 authors: Haofei Yu*, Keyang Xuan*, Fenghai Li*, Kunlun Zhu, Zijie Lei, Jiaxun Zhang, Ziheng Qi, Kyle Richardson, Jiaxuan You
 venue: 'EMNLP 2025 (Demo)'
 paperurl: 'https://arxiv.org/pdf/2510.06579v1'
