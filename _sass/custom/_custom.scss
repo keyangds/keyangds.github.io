@@ -203,3 +203,337 @@ html[data-theme="dark"] .topic-pill {
   color: #b8b8b8;
   border-color: #3a3a3a;
 }
+
+/* Publication Cards - Clean Layout */
+.publications-panel {
+  margin-top: 1.5rem;
+}
+
+.publication-filters {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.publication-filters__search {
+  position: relative;
+  max-width: 500px;
+}
+
+.publication-filters__search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+}
+
+.publication-filters__search input {
+  width: 100%;
+  padding: 0.6rem 0.8rem 0.6rem 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: #fff;
+  transition: all 0.2s;
+}
+
+.publication-filters__search input:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+}
+
+.publication-filters__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.filter-chip {
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  background: #fff;
+  color: #555;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-chip:hover {
+  background: #f5f5f5;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.filter-chip.is-active {
+  background: #1a73e8;
+  color: #fff;
+  border-color: #1a73e8;
+}
+
+.publication-empty {
+  padding: 2rem;
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.publications-list {
+  margin-top: 1.5rem;
+}
+
+.publications-list .list__item {
+  margin-bottom: 0;
+}
+
+.publication-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin-bottom: 0 !important;
+}
+
+.publication-card:last-child {
+  border-bottom: none;
+}
+
+.publication-card__media {
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publication-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.publication-card__media--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
+  color: #999;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.publication-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.publication-card__info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.publication-card__venue {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #333;
+}
+
+.publication-card__category {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+.publication-card__title {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.publication-card__title a {
+  color: #333;
+  text-decoration: none;
+}
+
+.publication-card__title a:hover {
+  color: #1a73e8;
+}
+
+.publication-card__authors {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.publication-card__authors strong {
+  font-weight: 600;
+  color: #333;
+}
+
+.publication-card__summary {
+  margin: 0.25rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+.publication-card__links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.publication-card__links a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1a73e8;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.publication-card__links a:hover {
+  color: #0d47a1;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .publication-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .publication-card__media {
+    aspect-ratio: 16/9;
+  }
+}
+
+/* Dark mode for publications */
+html[data-theme="dark"] .publication-filters__search input {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
+  color: #e0e0e0;
+}
+
+html[data-theme="dark"] .publication-filters__search input:focus {
+  border-color: #3b9cff;
+  box-shadow: 0 0 0 3px rgba(59, 156, 255, 0.1);
+}
+
+html[data-theme="dark"] .publication-filters__search-icon {
+  color: #666;
+}
+
+html[data-theme="dark"] .filter-chip {
+  background: #2a2a2a;
+  border-color: #3a3a3a;
+  color: #b8b8b8;
+}
+
+html[data-theme="dark"] .filter-chip:hover {
+  background: #333;
+  border-color: #444;
+}
+
+html[data-theme="dark"] .filter-chip.is-active {
+  background: #3b9cff;
+  color: #fff;
+  border-color: #3b9cff;
+}
+
+html[data-theme="dark"] .publication-empty {
+  color: #666;
+}
+
+html[data-theme="dark"] .publication-card {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+html[data-theme="dark"] .publication-card__media {
+  background: #2a2a2a;
+}
+
+html[data-theme="dark"] .publication-card__media--empty {
+  background: linear-gradient(135deg, #2a2a2a 0%, #1e1e1e 100%);
+  color: #666;
+}
+
+html[data-theme="dark"] .publication-card__venue {
+  color: #e0e0e0;
+}
+
+html[data-theme="dark"] .publication-card__category {
+  color: #999;
+}
+
+html[data-theme="dark"] .publication-card__title a {
+  color: #e0e0e0;
+}
+
+html[data-theme="dark"] .publication-card__title a:hover {
+  color: #3b9cff;
+}
+
+html[data-theme="dark"] .publication-card__authors {
+  color: #b8b8b8;
+}
+
+html[data-theme="dark"] .publication-card__authors strong {
+  color: #e0e0e0;
+}
+
+html[data-theme="dark"] .publication-card__summary {
+  color: #999;
+}
+
+html[data-theme="dark"] .publication-card__links a {
+  color: #3b9cff;
+}
+
+html[data-theme="dark"] .publication-card__links a:hover {
+  color: #6bb8ff;
+}
+
+/* Remove old archive item dark mode styles for publications */
+html[data-theme="dark"] .archive__item {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+html[data-theme="dark"] .archive__item:hover {
+  background: transparent;
+  border-color: transparent;
+}
+
+html[data-theme="dark"] .archive__item-title {
+  color: inherit;
+}
+
+html[data-theme="dark"] .archive__item-excerpt {
+  color: inherit;
+}
