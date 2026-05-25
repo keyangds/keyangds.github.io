@@ -21,7 +21,7 @@
       text-decoration: none;
 
       img {
-        box-shadow: 0 0 10px rgba(#000, 0.25);
+        box-shadow: none;
       }
     }
   }
@@ -67,16 +67,20 @@
 }
 
 .archive__item-teaser {
-  border-radius: $border-radius;
-  overflow: hidden;
+  border-radius: 0;
+  overflow: visible;
+  border: none;
+  box-shadow: none;
   img {
     width: 100%;
+    border: none;
+    box-shadow: none;
   }
 }
 
 .archive__item:hover {
   .archive__item-teaser {
-    box-shadow: 0 0 10px rgba(#000, 0.25);
+    box-shadow: none;
   }
 
   .archive__item-title {
