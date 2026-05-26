@@ -1,6 +1,6 @@
 // 增加主容器宽度，让 publication 列表更宽
 #main {
-  max-width: 1400px !important;
+  max-width: 1900px !important;
 }
 
 .archive__item-topics {
@@ -488,23 +488,23 @@ html[data-theme="dark"] .topic-pill {
   }
   
   .publication-card__venue {
-    font-size: 0.6rem;
+    font-size: 0.55rem;
   }
   
   .publication-card__title {
-    font-size: 0.64rem;
+    font-size: 0.55rem;
   }
   
   .publication-card__authors {
-    font-size: 0.62rem;
+    font-size: 0.55rem;
   }
   
   .publication-card__summary {
-    font-size: 0.64rem;
+    font-size: 0.55rem;
   }
   
   .publication-card__links a {
-    font-size: 0.64rem;
+    font-size: 0.55rem;
   }
 }
 
