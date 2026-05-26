@@ -410,17 +410,22 @@ html[data-theme="dark"] .topic-pill {
   margin-bottom: 0.05rem;
 }
 
+.publication-card .publication-card__venue,
 .publication-card__venue {
   font-weight: 600;
   font-size: 0.62rem !important;
   color: #333;
 }
 
+.publication-card .publication-card__category,
 .publication-card__category {
   font-size: 0.58rem !important;
   color: #666;
 }
 
+.publication-card h3.publication-card__title,
+.publication-card .publication-card__title,
+h3.publication-card__title,
 .publication-card__title {
   margin: 0;
   font-size: 0.66rem !important;
@@ -437,6 +442,9 @@ html[data-theme="dark"] .topic-pill {
   color: #1a73e8;
 }
 
+.publication-card p.publication-card__authors,
+.publication-card .publication-card__authors,
+p.publication-card__authors,
 .publication-card__authors {
   margin: 0;
   font-size: 0.64rem !important;
