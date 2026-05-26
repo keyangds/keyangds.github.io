@@ -1,13 +1,6 @@
 // 增加主容器宽度，让 publication 列表更宽
 #main {
-  max-width: 1900px !important;
-}
-
-// 去掉 .page 的 suffix(2/12) 右内边距，给 publication 内容更多横向空间
-@media (min-width: 64em) {
-  .page {
-    padding-right: 0 !important;
-  }
+  max-width: 1600px !important;
 }
 
 .archive__item-topics {
