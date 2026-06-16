@@ -1,0 +1,295 @@
+/* ==========================================================================
+   Misc section — hub, hobbies, photos, and the National Parks map.
+   Shares the site's visual language (blue/teal accents, news/publication card
+   style, section-heading badges) and supports light + dark mode.
+   ========================================================================== */
+
+.misc-root {
+  /* design tokens (light) */
+  --card: #ffffff;
+  --card-border: rgba(15, 28, 62, 0.08);
+  --card-shadow: 0 12px 24px rgba(18, 32, 70, 0.07);
+  --ink: #1f2433;
+  --muted: #6b7280;
+  --accent: #1a73e8;
+  --accent-hover: #0d47a1;
+  --teal: #0d9488;
+  --badge1: #f5f7ff;
+  --badge2: #e8edff;
+  --badge-ink: #2f386c;
+  --badge-border: rgba(26, 38, 92, 0.12);
+  --ring-track: #e5e9f8;
+  --terr-low: #d7dcc6;
+  --terr-forest: #6e9070;
+  --terr-arid: #d8cda2;
+  --terr-mtn: #9a8f80;
+  --pin: #1a73e8;
+  --pin-stroke: #ffffff;
+  --state-border: rgba(31, 36, 51, 0.18);
+  --outline: rgba(31, 36, 51, 0.30);
+  --relief-diffuse: 0.36;
+  --relief-hi: 0.46;
+  --relief-spec: 0.50;
+
+  background-image:
+    radial-gradient(1100px 440px at 85% -10%, #f1eeff 0%, transparent 58%),
+    radial-gradient(820px 420px at -8% 2%, #e6f0ff 0%, transparent 55%);
+  background-color: #eef2fb;
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 30px 28px 36px;
+  margin: 0.5rem auto 1rem;
+  max-width: 1080px;
+  color: var(--ink);
+}
+
+/* Misc pages: use the full content column (the theme's grid otherwise reserves
+   a right "suffix" gap for the author sidebar, squeezing the page). */
+@media (min-width: 925px) {
+  .page:has(.misc-root) {
+    float: none;
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* the parks map is the hero — give it more room than the other Misc pages */
+.misc-root.parks-page { max-width: 1180px; }
+
+html[data-theme="dark"] .misc-root {
+  --card: #242424;
+  --card-border: #333333;
+  --card-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  --ink: #e0e0e0;
+  --muted: #999999;
+  --accent: #3b9cff;
+  --accent-hover: #6bb4ff;
+  --teal: #34d399;
+  --badge1: #242424;
+  --badge2: #1e1e1e;
+  --badge-ink: #999999;
+  --badge-border: #333333;
+  --ring-track: #2f2f2f;
+  --terr-low: #23262b;
+  --terr-forest: #33503a;
+  --terr-arid: #454027;
+  --terr-mtn: #3c3a36;
+  --pin: #3b9cff;
+  --pin-stroke: #1a1a1a;
+  --state-border: rgba(224, 224, 224, 0.14);
+  --outline: rgba(224, 224, 224, 0.26);
+  --relief-diffuse: 0.34;
+  --relief-hi: 0.42;
+  --relief-spec: 0.46;
+
+  background-image: none;
+  background-color: #161616;
+  border-color: #2a2a2a;
+}
+
+/* hide the layout's default page title on Misc pages (each page draws its own) */
+.page__inner-wrap:has(.page__content .misc-root) > header { display: none; }
+
+/* ---- shared typography ---- */
+.misc-eyebrow {
+  margin: 0 0 6px;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+}
+.misc-h1 { margin: 0 0 8px; font-size: 1.8rem; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); }
+.misc-lead { margin: 0 0 4px; max-width: 680px; color: var(--muted); font-size: 1rem; line-height: 1.6; }
+.misc-back { margin-top: 2.4rem; padding-top: 1.25rem; border-top: 1px solid var(--card-border); font-size: 0.85rem; }
+.misc-back a { color: var(--accent); text-decoration: none; font-weight: 600; }
+.misc-back a:hover { color: var(--accent-hover); }
+.misc-tip-note { margin-top: 1rem; font-size: 0.76rem; color: var(--muted); }
+
+.misc-badge-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.2rem; height: 2.2rem; border-radius: 999px;
+  background: linear-gradient(135deg, var(--badge1) 0%, var(--badge2) 100%);
+  border: 1px solid var(--badge-border); color: var(--badge-ink);
+  box-shadow: 0 8px 18px rgba(12, 27, 63, 0.10);
+}
+
+/* ---- Hub ---- */
+.misc-hub__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 22px; }
+.misc-hubcard {
+  display: flex; flex-direction: column; gap: 8px;
+  background: var(--card); border: 1px solid var(--card-border); border-radius: 16px;
+  padding: 22px 20px; text-decoration: none; color: inherit;
+  box-shadow: var(--card-shadow); transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+.misc-hubcard:hover { transform: translateY(-4px); box-shadow: 0 18px 32px rgba(18, 32, 70, 0.14); }
+.misc-hubcard__icon {
+  width: 46px; height: 46px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; background: linear-gradient(135deg, var(--badge1), var(--badge2)); border: 1px solid var(--badge-border);
+}
+.misc-hubcard h3 { margin: 6px 0 0; font-size: 1.18rem; color: var(--ink); }
+.misc-hubcard p { margin: 0; color: var(--muted); font-size: 0.86rem; line-height: 1.5; }
+.misc-hubcard__go { margin-top: auto; padding-top: 8px; color: var(--teal); font-weight: 700; font-size: 0.82rem; }
+
+/* ---- Hobbies ---- */
+.misc-hob__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
+.misc-hob {
+  display: flex; gap: 12px; align-items: flex-start;
+  background: var(--card); border: 1px solid var(--card-border); border-radius: 14px; padding: 16px;
+  box-shadow: var(--card-shadow);
+}
+.misc-hob__icon { font-size: 1.5rem; line-height: 1; }
+.misc-hob h4 { margin: 0 0 3px; font-size: 0.98rem; color: var(--ink); }
+.misc-hob p { margin: 0; color: var(--muted); font-size: 0.82rem; line-height: 1.45; }
+.misc-now {
+  margin-top: 18px; padding: 14px 18px; border: 1px dashed var(--accent); border-radius: 14px;
+  background: var(--card); font-size: 0.9rem; color: var(--ink);
+}
+.misc-now__label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; color: var(--accent); margin-right: 0.5rem; }
+
+/* ---- Photos ---- */
+.misc-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 16px; }
+.misc-chip {
+  border: 1px solid var(--card-border); background: var(--card); color: var(--muted);
+  border-radius: 999px; padding: 5px 14px; font-size: 0.8rem; cursor: pointer; transition: all 0.18s;
+}
+.misc-chip:hover { color: var(--ink); }
+.misc-chip.is-active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.misc-masonry { columns: 3; column-gap: 12px; }
+.misc-photo {
+  break-inside: avoid; margin: 0 0 12px; border-radius: 12px; overflow: hidden; position: relative;
+  border: 1px solid var(--card-border); background: #000; cursor: zoom-in;
+}
+.misc-photo img { width: 100%; display: block; transition: transform 0.35s ease; }
+.misc-photo:hover img { transform: scale(1.04); }
+.misc-photo__cap {
+  position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: 20px 12px 9px; color: #fff;
+  font-size: 0.78rem; background: linear-gradient(transparent, rgba(0, 0, 0, 0.66)); opacity: 0; transition: opacity 0.25s;
+}
+.misc-photo:hover .misc-photo__cap { opacity: 1; }
+.misc-photo__cap b { display: block; font-size: 0.92rem; }
+.misc-photo-empty { color: var(--muted); font-size: 0.9rem; padding: 1rem 0; }
+.misc-photos-placeholder {
+  margin-top: 20px; padding: 38px 24px; text-align: center;
+  background: var(--card); border: 1px dashed var(--card-border); border-radius: 16px;
+}
+.misc-photos-placeholder__icon { font-size: 2rem; display: block; margin-bottom: 8px; opacity: 0.7; }
+.misc-photos-placeholder p { margin: 0 auto; max-width: 460px; color: var(--muted); font-size: 0.9rem; line-height: 1.5; }
+.misc-photos-placeholder code { font-size: 0.84em; }
+
+.misc-lightbox {
+  position: fixed; inset: 0; z-index: 9999; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 14px; padding: 4vh 4vw;
+  background: rgba(10, 14, 24, 0.88); cursor: zoom-out;
+}
+.misc-lightbox[hidden] { display: none; }
+.misc-lightbox__img { max-width: 92vw; max-height: 80vh; border-radius: 8px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5); }
+.misc-lightbox__cap { margin: 0; color: #e7ebf5; font-size: 0.85rem; }
+.misc-lightbox__close {
+  position: absolute; top: 18px; right: 22px; background: none; border: none; color: #fff;
+  font-size: 2rem; line-height: 1; cursor: pointer; opacity: 0.8;
+}
+.misc-lightbox__close:hover { opacity: 1; }
+
+/* ==========================================================================
+   Parks map
+   ========================================================================== */
+.parks-hdr { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; flex-wrap: wrap; margin-bottom: 18px; }
+.parks-title-row { display: flex; align-items: center; gap: 0.6rem; }
+.parks-title { margin: 0; font-size: 1.7rem; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); }
+.parks-tagline { margin: 8px 0 0; color: var(--muted); font-size: 0.95rem; }
+
+.parks-progress { display: flex; align-items: center; gap: 12px; }
+.parks-ring { position: relative; width: 74px; height: 74px; }
+.parks-ring svg { transform: rotate(-90deg); }
+.parks-ring__track { stroke: var(--ring-track); }
+.parks-ring__bar { stroke: var(--accent); }
+.parks-ring__num { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.parks-ring__num b { font-size: 1.05rem; line-height: 1; color: var(--ink); }
+.parks-ring__num span { font-size: 0.56rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+.parks-stats { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+.parks-stats b { color: var(--ink); }
+
+.parks-stage { display: flex; flex-direction: column; gap: 16px; }
+.parks-mapcard {
+  position: relative; overflow: hidden; padding: 8px; border-radius: 16px;
+  background: var(--card); border: 1px solid var(--card-border); box-shadow: var(--card-shadow);
+}
+.parks-map { width: 100%; height: auto; display: block; }
+.parks-maperr { color: var(--muted); font-size: 0.85rem; padding: 0.5rem; }
+
+/* terrain + map element fills (theme-driven via CSS vars) */
+.parks-land-base { fill: var(--terr-low); }
+.parks-land-shadow { fill: var(--terr-low); }
+.parks-tint--forest { fill: var(--terr-forest); }
+.parks-tint--arid { fill: var(--terr-arid); }
+.parks-tint--mtn { fill: var(--terr-mtn); }
+.parks-relief-diffuse { mix-blend-mode: multiply; opacity: var(--relief-diffuse); }
+.parks-relief-hi { mix-blend-mode: multiply; opacity: var(--relief-hi); }
+.parks-relief-spec { mix-blend-mode: screen; opacity: var(--relief-spec); }
+.parks-state-border { fill: none; stroke: var(--state-border); stroke-width: 0.5; }
+.parks-outline { fill: none; stroke: var(--outline); stroke-width: 1; }
+.parks-pin { cursor: pointer; transition: r 0.15s ease, fill 0.15s ease; }
+.parks-pin--visited { fill: var(--pin); stroke: var(--pin-stroke); stroke-width: 1.5; }
+.parks-pin--notyet { fill: none; stroke: var(--ink); stroke-opacity: 0.5; stroke-width: 1.6; }
+.parks-pin:hover { fill: var(--teal); stroke: var(--pin-stroke); }
+
+.parks-legend {
+  position: absolute; left: 16px; bottom: 14px; z-index: 3; display: flex; flex-wrap: wrap; gap: 12px;
+  font-size: 0.72rem; color: var(--muted); padding: 6px 11px; border-radius: 10px;
+  background: color-mix(in srgb, var(--card) 82%, transparent); border: 1px solid var(--card-border);
+}
+.parks-legend .sw { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; }
+.sw-forest { background: var(--terr-forest); }
+.sw-arid { background: var(--terr-arid); }
+.sw-mtn { background: var(--terr-mtn); }
+.sw-visited { background: var(--pin); }
+.sw-notyet { background: transparent; border: 1.6px solid var(--muted); }
+
+.parks-tip {
+  position: fixed; pointer-events: none; z-index: 50; opacity: 0; transform: translate(-50%, -135%);
+  background: var(--ink); color: var(--card); font-size: 0.76rem; padding: 5px 9px; border-radius: 7px;
+  white-space: nowrap; transition: opacity 0.12s;
+}
+.parks-tip.is-on { opacity: 1; }
+
+/* detail card */
+.parks-detail { display: flex; flex-direction: row; background: var(--card); border: 1px solid var(--card-border); border-radius: 16px; overflow: hidden; box-shadow: var(--card-shadow); }
+.parks-detail__photo { width: 320px; flex: none; aspect-ratio: 16 / 10; position: relative; display: flex; align-items: center; justify-content: center; background: var(--badge2); }
+.parks-detail__body { flex: 1; }
+.parks-detail__photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.parks-detail__photo--empty span:last-child { font-size: 2.4rem; opacity: 0.4; }
+.parks-detail__badge {
+  position: absolute; top: 10px; left: 10px; background: var(--accent); color: #fff; font-size: 0.66rem; font-weight: 700;
+  padding: 3px 9px; border-radius: 999px; letter-spacing: 0.03em;
+}
+.parks-detail__badge--no { background: var(--muted); }
+.parks-detail__body { padding: 16px 18px 20px; }
+.parks-detail__body h3 { margin: 0 0 3px; font-size: 1.2rem; font-weight: 700; color: var(--ink); }
+.parks-detail__where { color: var(--accent); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 10px; }
+.parks-detail__meta { font-size: 0.82rem; color: var(--muted); margin: 0 0 10px; }
+.parks-detail__meta b { color: var(--ink); }
+.parks-detail__note { font-size: 0.9rem; line-height: 1.5; color: var(--ink); }
+
+/* territories */
+.parks-territories { margin-top: 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.parks-territories__label { font-size: 0.78rem; color: var(--muted); }
+.parks-chip { font-size: 0.76rem; padding: 4px 11px; border-radius: 999px; border: 1px solid var(--card-border); background: var(--card); color: var(--ink); }
+.parks-chip.is-visited { border-color: var(--accent); color: var(--accent); }
+
+/* ---- responsive ---- */
+@media (max-width: 880px) {
+  .parks-stage { grid-template-columns: 1fr; }
+  .misc-hub__grid { grid-template-columns: 1fr; }
+  .misc-hob__grid { grid-template-columns: repeat(2, 1fr); }
+  .misc-masonry { columns: 2; }
+}
+@media (max-width: 540px) {
+  .misc-root { padding: 22px 16px 26px; }
+  .misc-hob__grid { grid-template-columns: 1fr; }
+  .misc-masonry { columns: 1; }
+  .parks-detail { flex-direction: column; }
+  .parks-detail__photo { width: 100%; }
+}

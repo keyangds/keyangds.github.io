@@ -1,0 +1,373 @@
+# U.S. National Parks (all 63 designated parks).
+# Geography (name/state/region/lat/lng) is pre-filled — you never need to touch it.
+# To record a visit, add to that park:  visited: true   (and optionally) date / photo / note
+#   date:  free text, e.g. "Aug 2024"
+#   photo: filename in /images/parks/  (e.g. yosemite.jpg)  OR a full https:// url
+#   note:  one short personal line
+# The sample `visited`/`date` values below are placeholders for the preview — edit to your real trips.
+
+- name: "Acadia"
+  state: "ME"
+  region: "Atlantic"
+  lat: 44.35
+  lng: -68.21
+  visited: true
+  date: "Oct 2023"
+- name: "Arches"
+  state: "UT"
+  region: "Colorado Plateau"
+  lat: 38.68
+  lng: -109.57
+  visited: true
+  date: "May 2023"
+- name: "Badlands"
+  state: "SD"
+  region: "Great Plains"
+  lat: 43.86
+  lng: -102.34
+- name: "Big Bend"
+  state: "TX"
+  region: "Desert Southwest"
+  lat: 29.25
+  lng: -103.25
+- name: "Biscayne"
+  state: "FL"
+  region: "Atlantic"
+  lat: 25.49
+  lng: -80.21
+- name: "Black Canyon of the Gunnison"
+  state: "CO"
+  region: "Rockies"
+  lat: 38.57
+  lng: -107.72
+- name: "Bryce Canyon"
+  state: "UT"
+  region: "Colorado Plateau"
+  lat: 37.57
+  lng: -112.18
+  visited: true
+  date: "May 2023"
+- name: "Canyonlands"
+  state: "UT"
+  region: "Colorado Plateau"
+  lat: 38.2
+  lng: -109.93
+  visited: true
+  date: "May 2023"
+- name: "Capitol Reef"
+  state: "UT"
+  region: "Colorado Plateau"
+  lat: 38.2
+  lng: -111.17
+- name: "Carlsbad Caverns"
+  state: "NM"
+  region: "Desert Southwest"
+  lat: 32.17
+  lng: -104.44
+- name: "Channel Islands"
+  state: "CA"
+  region: "Pacific"
+  lat: 34.0
+  lng: -119.42
+  visited: true
+  date: "Jun 2024"
+- name: "Congaree"
+  state: "SC"
+  region: "Atlantic"
+  lat: 33.78
+  lng: -80.78
+- name: "Crater Lake"
+  state: "OR"
+  region: "Pacific Northwest"
+  lat: 42.94
+  lng: -122.1
+- name: "Cuyahoga Valley"
+  state: "OH"
+  region: "Midwest"
+  lat: 41.24
+  lng: -81.55
+- name: "Death Valley"
+  state: "CA"
+  region: "Desert Southwest"
+  lat: 36.51
+  lng: -117.0
+  visited: true
+  date: "Mar 2024"
+- name: "Denali"
+  state: "AK"
+  region: "Alaska"
+  lat: 63.33
+  lng: -150.5
+- name: "Dry Tortugas"
+  state: "FL"
+  region: "Atlantic"
+  lat: 24.63
+  lng: -82.87
+- name: "Everglades"
+  state: "FL"
+  region: "Atlantic"
+  lat: 25.32
+  lng: -80.93
+- name: "Gates of the Arctic"
+  state: "AK"
+  region: "Alaska"
+  lat: 67.78
+  lng: -153.3
+- name: "Gateway Arch"
+  state: "MO"
+  region: "Midwest"
+  lat: 38.63
+  lng: -90.19
+- name: "Glacier"
+  state: "MT"
+  region: "Rockies"
+  lat: 48.7
+  lng: -113.72
+  visited: true
+  date: "Jul 2023"
+- name: "Glacier Bay"
+  state: "AK"
+  region: "Alaska"
+  lat: 58.5
+  lng: -137.0
+- name: "Grand Canyon"
+  state: "AZ"
+  region: "Colorado Plateau"
+  lat: 36.1
+  lng: -112.11
+  visited: true
+  date: "May 2023"
+- name: "Grand Teton"
+  state: "WY"
+  region: "Rockies"
+  lat: 43.79
+  lng: -110.68
+  visited: true
+  date: "Jul 2023"
+- name: "Great Basin"
+  state: "NV"
+  region: "Great Basin"
+  lat: 38.98
+  lng: -114.3
+- name: "Great Sand Dunes"
+  state: "CO"
+  region: "Rockies"
+  lat: 37.79
+  lng: -105.51
+  visited: true
+  date: "Sep 2023"
+- name: "Great Smoky Mountains"
+  state: "TN"
+  region: "Appalachia"
+  lat: 35.61
+  lng: -83.49
+  visited: true
+  date: "Apr 2022"
+- name: "Guadalupe Mountains"
+  state: "TX"
+  region: "Desert Southwest"
+  lat: 31.92
+  lng: -104.87
+- name: "Haleakalā"
+  state: "HI"
+  region: "Hawaii"
+  lat: 20.72
+  lng: -156.17
+- name: "Hawaiʻi Volcanoes"
+  state: "HI"
+  region: "Hawaii"
+  lat: 19.38
+  lng: -155.2
+- name: "Hot Springs"
+  state: "AR"
+  region: "South"
+  lat: 34.51
+  lng: -93.05
+- name: "Indiana Dunes"
+  state: "IN"
+  region: "Midwest"
+  lat: 41.65
+  lng: -87.05
+- name: "Isle Royale"
+  state: "MI"
+  region: "Midwest"
+  lat: 48.0
+  lng: -88.55
+- name: "Joshua Tree"
+  state: "CA"
+  region: "Desert Southwest"
+  lat: 33.79
+  lng: -115.9
+  visited: true
+  date: "Mar 2024"
+- name: "Katmai"
+  state: "AK"
+  region: "Alaska"
+  lat: 58.5
+  lng: -155.0
+- name: "Kenai Fjords"
+  state: "AK"
+  region: "Alaska"
+  lat: 59.92
+  lng: -149.65
+- name: "Kings Canyon"
+  state: "CA"
+  region: "Sierra Nevada"
+  lat: 36.8
+  lng: -118.55
+  visited: true
+  date: "Jul 2024"
+- name: "Kobuk Valley"
+  state: "AK"
+  region: "Alaska"
+  lat: 67.55
+  lng: -159.28
+- name: "Lake Clark"
+  state: "AK"
+  region: "Alaska"
+  lat: 60.97
+  lng: -153.42
+- name: "Lassen Volcanic"
+  state: "CA"
+  region: "Pacific"
+  lat: 40.49
+  lng: -121.51
+- name: "Mammoth Cave"
+  state: "KY"
+  region: "South"
+  lat: 37.18
+  lng: -86.1
+- name: "Mesa Verde"
+  state: "CO"
+  region: "Colorado Plateau"
+  lat: 37.23
+  lng: -108.46
+- name: "Mount Rainier"
+  state: "WA"
+  region: "Pacific Northwest"
+  lat: 46.85
+  lng: -121.75
+  visited: true
+  date: "Aug 2023"
+- name: "New River Gorge"
+  state: "WV"
+  region: "Appalachia"
+  lat: 38.07
+  lng: -81.08
+- name: "North Cascades"
+  state: "WA"
+  region: "Pacific Northwest"
+  lat: 48.7
+  lng: -121.2
+- name: "Olympic"
+  state: "WA"
+  region: "Pacific Northwest"
+  lat: 47.8
+  lng: -123.6
+  visited: true
+  date: "Aug 2023"
+- name: "Petrified Forest"
+  state: "AZ"
+  region: "Colorado Plateau"
+  lat: 34.91
+  lng: -109.81
+- name: "Pinnacles"
+  state: "CA"
+  region: "Pacific"
+  lat: 36.49
+  lng: -121.16
+  visited: true
+  date: "Feb 2024"
+- name: "Redwood"
+  state: "CA"
+  region: "Pacific"
+  lat: 41.21
+  lng: -124.0
+  visited: true
+  date: "Jun 2024"
+- name: "Rocky Mountain"
+  state: "CO"
+  region: "Rockies"
+  lat: 40.34
+  lng: -105.68
+  visited: true
+  date: "Sep 2023"
+- name: "Saguaro"
+  state: "AZ"
+  region: "Desert Southwest"
+  lat: 32.25
+  lng: -110.5
+- name: "Sequoia"
+  state: "CA"
+  region: "Sierra Nevada"
+  lat: 36.49
+  lng: -118.57
+  visited: true
+  date: "Jul 2024"
+- name: "Shenandoah"
+  state: "VA"
+  region: "Appalachia"
+  lat: 38.53
+  lng: -78.35
+  visited: true
+  date: "Apr 2022"
+- name: "Theodore Roosevelt"
+  state: "ND"
+  region: "Great Plains"
+  lat: 46.98
+  lng: -103.54
+- name: "Virgin Islands"
+  state: "VI"
+  region: "Caribbean"
+  lat: 18.34
+  lng: -64.73
+  offmap: true
+- name: "Voyageurs"
+  state: "MN"
+  region: "Midwest"
+  lat: 48.5
+  lng: -92.88
+- name: "White Sands"
+  state: "NM"
+  region: "Desert Southwest"
+  lat: 32.78
+  lng: -106.17
+  visited: true
+  date: "Dec 2023"
+- name: "Wind Cave"
+  state: "SD"
+  region: "Great Plains"
+  lat: 43.6
+  lng: -103.48
+- name: "Wrangell–St. Elias"
+  state: "AK"
+  region: "Alaska"
+  lat: 61.0
+  lng: -142.0
+- name: "Yellowstone"
+  state: "WY"
+  region: "Rockies"
+  lat: 44.6
+  lng: -110.5
+  visited: true
+  date: "Jul 2023"
+- name: "Yosemite"
+  state: "CA"
+  region: "Sierra Nevada"
+  lat: 37.83
+  lng: -119.5
+  visited: true
+  date: "Aug 2024"
+- name: "Zion"
+  state: "UT"
+  region: "Colorado Plateau"
+  lat: 37.3
+  lng: -113.05
+  visited: true
+  date: "May 2023"
+- name: "National Park of American Samoa"
+  state: "AS"
+  region: "Pacific"
+  lat: -14.25
+  lng: -170.68
+  offmap: true

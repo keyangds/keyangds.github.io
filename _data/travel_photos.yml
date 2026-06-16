@@ -1,0 +1,71 @@
+# Travel photos shown on /misc/photos/  (images live in images/travel/)
+#   file  = filename in images/travel/  (or a full https:// URL)
+#   title = caption shown on hover / in the lightbox
+#   place = shown next to the year in the caption
+#   year  = optional
+# Edit titles/places freely — these were auto-filled from the filenames.
+
+- file: "2025_9_michigan.jpg"
+  title: "Michigan"
+  place: "Midwest"
+  year: 2025
+- file: "2025_7_whitesand_national_park.jpg"
+  title: "White Sands National Park"
+  place: "Southwest"
+  year: 2025
+- file: "2025_5_olympic_national_park.jpg"
+  title: "Rialto Beach"
+  place: "Olympic National Park"
+  year: 2025
+- file: "2025_5_seattle.jpg"
+  title: "Seattle"
+  place: "Pacific NW"
+  year: 2025
+- file: "2025_5_seattle_2.jpg"
+  title: "City View of Seattle"
+  place: "Pacific NW"
+  year: 2025
+- file: "2025_3_Sanfrancisco.jpg"
+  title: "San Francisco"
+  place: "California"
+  year: 2025
+- file: "2025_3_yosemite_national_park.jpg"
+  title: "Yosemite National Park"
+  place: "California"
+  year: 2025
+- file: "2024_12_santababara.jpg"
+  title: "Sunrise in Santa Barbara"
+  place: "California"
+  year: 2024
+- file: "2024_12_santababara_view.jpg"
+  title: "Santa Barbara"
+  place: "California"
+  year: 2024
+- file: "2024_7_shiprock.jpg"
+  title: "Shiprock"
+  place: "Southwest"
+  year: 2024
+- file: "2024_3_arches_national_park.jpg"
+  title: "Arches National Park"
+  place: "Southwest"
+  year: 2024
+- file: "2024_3_zion_national_park.jpg"
+  title: "Zion National Park"
+  place: "Southwest"
+  year: 2024
+- file: "2024_3_utah.jpg"
+  title: "Utah"
+  place: "Southwest"
+  year: 2024
+- file: "2022_12_alaska.jpg"
+  title: "Alaska"
+  place: "Alaska"
+  year: 2022
+- file: "2022_12_aurora_alaska.jpg"
+  title: "Aurora in Alaska"
+  place: "Alaska"
+  year: 2022
+- file: "minneapolis.jpg"
+  title: "City View of Minneapolis"
+  place: "Minnesota"
+  year: 2021
