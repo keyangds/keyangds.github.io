@@ -11,20 +11,20 @@
   region: "Atlantic"
   lat: 44.35
   lng: -68.21
-  visited: true
-  date: "Oct 2023"
 - name: "Arches"
   state: "UT"
   region: "Colorado Plateau"
   lat: 38.68
   lng: -109.57
   visited: true
-  date: "May 2023"
+  date: "March 2024"
 - name: "Badlands"
   state: "SD"
   region: "Great Plains"
   lat: 43.86
   lng: -102.34
+  visited: true
+  date: "March 2022"
 - name: "Big Bend"
   state: "TX"
   region: "Desert Southwest"
@@ -46,14 +46,12 @@
   lat: 37.57
   lng: -112.18
   visited: true
-  date: "May 2023"
+  date: "March 2024"
 - name: "Canyonlands"
   state: "UT"
   region: "Colorado Plateau"
   lat: 38.2
   lng: -109.93
-  visited: true
-  date: "May 2023"
 - name: "Capitol Reef"
   state: "UT"
   region: "Colorado Plateau"
@@ -64,13 +62,13 @@
   region: "Desert Southwest"
   lat: 32.17
   lng: -104.44
+  visited: true
+  date: "July 2024"
 - name: "Channel Islands"
   state: "CA"
   region: "Pacific"
   lat: 34.0
   lng: -119.42
-  visited: true
-  date: "Jun 2024"
 - name: "Congaree"
   state: "SC"
   region: "Atlantic"
@@ -92,7 +90,7 @@
   lat: 36.51
   lng: -117.0
   visited: true
-  date: "Mar 2024"
+  date: "Jan 2023"
 - name: "Denali"
   state: "AK"
   region: "Alaska"
@@ -123,8 +121,6 @@
   region: "Rockies"
   lat: 48.7
   lng: -113.72
-  visited: true
-  date: "Jul 2023"
 - name: "Glacier Bay"
   state: "AK"
   region: "Alaska"
@@ -136,14 +132,12 @@
   lat: 36.1
   lng: -112.11
   visited: true
-  date: "May 2023"
+  date: "March 2024"
 - name: "Grand Teton"
   state: "WY"
   region: "Rockies"
   lat: 43.79
   lng: -110.68
-  visited: true
-  date: "Jul 2023"
 - name: "Great Basin"
   state: "NV"
   region: "Great Basin"
@@ -154,15 +148,11 @@
   region: "Rockies"
   lat: 37.79
   lng: -105.51
-  visited: true
-  date: "Sep 2023"
 - name: "Great Smoky Mountains"
   state: "TN"
   region: "Appalachia"
   lat: 35.61
   lng: -83.49
-  visited: true
-  date: "Apr 2022"
 - name: "Guadalupe Mountains"
   state: "TX"
   region: "Desert Southwest"
@@ -198,8 +188,6 @@
   region: "Desert Southwest"
   lat: 33.79
   lng: -115.9
-  visited: true
-  date: "Mar 2024"
 - name: "Katmai"
   state: "AK"
   region: "Alaska"
@@ -215,8 +203,6 @@
   region: "Sierra Nevada"
   lat: 36.8
   lng: -118.55
-  visited: true
-  date: "Jul 2024"
 - name: "Kobuk Valley"
   state: "AK"
   region: "Alaska"
@@ -247,8 +233,6 @@
   region: "Pacific Northwest"
   lat: 46.85
   lng: -121.75
-  visited: true
-  date: "Aug 2023"
 - name: "New River Gorge"
   state: "WV"
   region: "Appalachia"
@@ -265,7 +249,7 @@
   lat: 47.8
   lng: -123.6
   visited: true
-  date: "Aug 2023"
+  date: "May 2025"
 - name: "Petrified Forest"
   state: "AZ"
   region: "Colorado Plateau"
@@ -276,22 +260,16 @@
   region: "Pacific"
   lat: 36.49
   lng: -121.16
-  visited: true
-  date: "Feb 2024"
 - name: "Redwood"
   state: "CA"
   region: "Pacific"
   lat: 41.21
   lng: -124.0
-  visited: true
-  date: "Jun 2024"
 - name: "Rocky Mountain"
   state: "CO"
   region: "Rockies"
   lat: 40.34
   lng: -105.68
-  visited: true
-  date: "Sep 2023"
 - name: "Saguaro"
   state: "AZ"
   region: "Desert Southwest"
@@ -302,15 +280,11 @@
   region: "Sierra Nevada"
   lat: 36.49
   lng: -118.57
-  visited: true
-  date: "Jul 2024"
 - name: "Shenandoah"
   state: "VA"
   region: "Appalachia"
   lat: 38.53
   lng: -78.35
-  visited: true
-  date: "Apr 2022"
 - name: "Theodore Roosevelt"
   state: "ND"
   region: "Great Plains"
@@ -333,7 +307,7 @@
   lat: 32.78
   lng: -106.17
   visited: true
-  date: "Dec 2023"
+  date: "July 2024"
 - name: "Wind Cave"
   state: "SD"
   region: "Great Plains"
@@ -349,22 +323,20 @@
   region: "Rockies"
   lat: 44.6
   lng: -110.5
-  visited: true
-  date: "Jul 2023"
 - name: "Yosemite"
   state: "CA"
   region: "Sierra Nevada"
   lat: 37.83
   lng: -119.5
   visited: true
-  date: "Aug 2024"
+  date: "March 2025"
 - name: "Zion"
   state: "UT"
   region: "Colorado Plateau"
   lat: 37.3
   lng: -113.05
   visited: true
-  date: "May 2023"
+  date: "March 2024"
 - name: "National Park of American Samoa"
   state: "AS"
   region: "Pacific"
