@@ -5,9 +5,13 @@
 #   year  = optional
 # Edit titles/places freely — these were auto-filled from the filenames.
 
+- file: "2026_6_boston.jpg"
+  title: "Old State House"
+  place: "Boston"
+  year: 2026
 - file: "2025_9_michigan.jpg"
-  title: "Michigan"
-  place: "Midwest"
+  title: "Lake of the Clouds, Porcupine Mountains"
+  place: "Michigan"
   year: 2025
 - file: "2025_7_whitesand_national_park.jpg"
   title: "White Sands National Park"
