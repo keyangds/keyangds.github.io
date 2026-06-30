@@ -5,6 +5,10 @@
 #   year  = optional
 # Edit titles/places freely — these were auto-filled from the filenames.
 
+- file: "2026_6_gateway_arch.jpg"
+  title: "Gateway Arch"
+  place: "St Louis"
+  year: 2026
 - file: "2026_6_boston.jpg"
   title: "Old State House"
   place: "Boston"
@@ -15,7 +19,7 @@
   year: 2025
 - file: "2025_7_whitesand_national_park.jpg"
   title: "White Sands National Park"
-  place: "Southwest"
+  place: "New Mexico"
   year: 2025
 - file: "2025_5_olympic_national_park.jpg"
   title: "Rialto Beach"
@@ -23,11 +27,11 @@
   year: 2025
 - file: "2025_5_seattle.jpg"
   title: "Seattle"
-  place: "Pacific NW"
+  place: "Seattle"
   year: 2025
 - file: "2025_5_seattle_2.jpg"
   title: "City View of Seattle"
-  place: "Pacific NW"
+  place: "Seattle"
   year: 2025
 - file: "2025_3_Sanfrancisco.jpg"
   title: "San Francisco"
@@ -47,19 +51,23 @@
   year: 2024
 - file: "2024_7_shiprock.jpg"
   title: "Shiprock"
-  place: "Southwest"
+  place: "New Mexico"
   year: 2024
 - file: "2024_3_arches_national_park.jpg"
   title: "Arches National Park"
-  place: "Southwest"
+  place: "Utah"
   year: 2024
 - file: "2024_3_zion_national_park.jpg"
   title: "Zion National Park"
-  place: "Southwest"
+  place: "Utah"
+  year: 2024
+- file: "2024_3_arches.jpg"
+  title: "Moab"
+  place: "Utah"
   year: 2024
 - file: "2024_3_utah.jpg"
-  title: "Utah"
-  place: "Southwest"
+  title: "View on the Road"
+  place: "Utah"
   year: 2024
 - file: "2022_12_alaska.jpg"
   title: "Alaska"
