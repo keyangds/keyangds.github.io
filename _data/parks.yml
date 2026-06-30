@@ -116,6 +116,8 @@
   region: "Midwest"
   lat: 38.63
   lng: -90.19
+  visited: true
+  date: "June 2026"
 - name: "Glacier"
   state: "MT"
   region: "Rockies"
