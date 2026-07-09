@@ -1,4 +1,6 @@
 ---
+- data: 2026-07
+  summary: "One paper accepted at **COLM 2026**, see you in San Francisco"
 - date: 2026-05
   summary: "✨ New paper released: <a href='https://arxiv.org/abs/2605.17829' style='color: #1e6bb8;'>Interactive Evaluation Requires a Design Science</a>. We argue that interactive evaluation needs explicit principles for mapping trajectory artifacts to evaluative judgments."
 - date: 2026-03

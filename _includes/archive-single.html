@@ -74,15 +74,6 @@
       </div>
 
       <div class="publication-card__content">
-        <div class="publication-card__info">
-          {% if post.venue %}
-            <span class="publication-card__venue">{{ post.venue }}</span>
-          {% endif %}
-          {% if post.category %}
-            <span class="publication-card__category">{{ post.category }}</span>
-          {% endif %}
-        </div>
-
         <h3 class="publication-card__title">
           <a href="{{ primary_link | strip }}"{% if post.paperurl or post.projecturl or post.codeurl %} target="_blank" rel="noopener"{% endif %}>{{ title }}</a>
         </h3>
@@ -101,10 +92,8 @@
           <p class="publication-card__authors">{{ authors_markup | strip }}</p>
         {% endif %}
 
-        {% if post.summary %}
-          <p class="publication-card__summary">{{ post.summary }}</p>
-        {% elsif post.excerpt %}
-          <p class="publication-card__summary">{{ post.excerpt | markdownify | strip_html }}</p>
+        {% if post.venue or post.category %}
+          <p class="publication-card__venue">{{ post.venue }}{% if post.venue and post.category %}, {% endif %}{{ post.category }}</p>
         {% endif %}
 
         <div class="publication-card__links">
@@ -122,6 +111,11 @@
           {% endif %}
         </div>
 
+        {% if post.summary %}
+          <p class="publication-card__summary">{{ post.summary }}</p>
+        {% elsif post.excerpt %}
+          <p class="publication-card__summary">{{ post.excerpt | markdownify | strip_html }}</p>
+        {% endif %}
       </div>
     {% else %}
       {% if include.type == "grid" and teaser %}
