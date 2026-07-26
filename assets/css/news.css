@@ -1,0 +1,129 @@
+/* ===========================================================================
+   Homepage News — plain flowing list (no box, no cells, no dividers)
+   ---------------------------------------------------------------------------
+   Loaded only on the homepage (via `uses_news_assets`) and AFTER main.css, so
+   these rules override the boxed `.news-board` card styles from _custom.scss.
+   Style: a simple bulleted "updates" list that flows with the page, like
+   qiancheng0.github.io — one continuous list, not a grid of separated rows.
+   =========================================================================== */
+
+/* Outer container: no box at all */
+.news-board {
+  margin-top: 0.25rem;
+  margin-bottom: 2.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+/* List: a normal bulleted list, all items shown, no scroll box */
+.news-board__list {
+  display: block;
+  margin: 0;
+  padding: 0 0 0 1.2em;   /* room for the bullets */
+  max-height: none;
+  overflow: visible;
+  cursor: default;
+}
+
+/* Each update: a plain list item — bullet + text, hanging indent, no chrome */
+.news-card {
+  display: list-item;
+  list-style: disc;
+  margin: 0 0 0.45rem;
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  line-height: 1.55;
+  color: #3c4152;
+}
+
+.news-card:last-child {
+  margin-bottom: 0;
+}
+
+.news-card::marker {
+  color: #b9becc;   /* subtle bullet */
+}
+
+/* Date: a bold inline marker at the start of the line (not a separate column) */
+.news-card__date {
+  display: inline;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #6b7180;
+  margin-right: 0.5em;
+  white-space: nowrap;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Summary: flows inline right after the date */
+.news-card__summary {
+  display: inline;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #3c4152;
+}
+
+.news-card__summary a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.news-card__summary a:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+/* Scroll hint no longer applies */
+.news-board__hint {
+  display: none;
+}
+
+/* ----- Dark mode ----- */
+html[data-theme="dark"] .news-board,
+html[data-theme="dark"] .news-card {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+html[data-theme="dark"] .news-card {
+  color: #c9cedb;
+}
+
+html[data-theme="dark"] .news-card::marker {
+  color: #5a6070;
+}
+
+html[data-theme="dark"] .news-card__date {
+  color: #9aa0b0;
+}
+
+html[data-theme="dark"] .news-card__summary {
+  color: #c9cedb;
+}
+
+html[data-theme="dark"] .news-card__summary a {
+  color: #3b9cff;
+}
+
+html[data-theme="dark"] .news-card__summary a:hover {
+  color: #6bb4ff;
+}
+
+/* ----- Small screens ----- */
+@media (max-width: 640px) {
+  .news-card,
+  .news-card__date,
+  .news-card__summary {
+    font-size: 0.86rem;
+  }
+}

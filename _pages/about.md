@@ -67,6 +67,7 @@ coordinate, both with humans and among themselves, to accomplish complex, real-w
 {% endif %}
 
 
+<div class="publications-section" markdown="0">
 <h2 class="section-heading">
   <span class="section-heading-icon" aria-hidden="true">
     <i class="fas fa-book-open"></i>
@@ -111,3 +112,6 @@ coordinate, both with humans and among themselves, to accomplish complex, real-w
     {% endfor %}
   </div>
 </div>
+
+</div>
+<!-- /.publications-section -->

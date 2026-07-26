@@ -3,18 +3,15 @@ permalink: /misc/parks/
 title: "U.S. National Parks"
 excerpt: "An interactive relief map of every U.S. National Park I've visited."
 author_profile: false
+uses_misc_hub_assets: true
 ---
 
 <div class="misc-root parks-page">
-  <div class="parks-hdr">
-    <div>
-      <div class="parks-title-row">
-        <span class="misc-badge-icon" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 3 4 8 5-5 5 14H2L8 3z"/></svg>
-        </span>
-        <h1 class="parks-title">U.S. National Parks</h1>
-      </div>
-      <p class="parks-tagline">Chasing all 63 — across mountains, deserts, and coasts.</p>
+  <header class="fn-head parks-head">
+    <div class="parks-head__intro">
+      <p class="fn-eyebrow">The slow quest</p>
+      <h1 class="fn-title fn-title--sub">National Parks</h1>
+      <p class="fn-lead">Chasing all sixty-three — across mountains, deserts, and coasts.</p>
     </div>
     <div class="parks-progress">
       <div class="parks-ring">
@@ -30,7 +27,7 @@ author_profile: false
         <span><b data-stat-togo>63</b> to go</span>
       </div>
     </div>
-  </div>
+  </header>
 
   <div class="parks-stage">
     <div class="parks-mapcard">
@@ -57,15 +54,15 @@ author_profile: false
   {% assign off = site.data.parks | where: "offmap", true %}
   {% if off and off.size > 0 %}
     <div class="parks-territories">
-      <span class="parks-territories__label">Also tracked (off the map):</span>
+      <span class="parks-territories__label">Also tracked, off the map</span>
       {% for t in off %}
-        <span class="parks-chip {% if t.visited %}is-visited{% endif %}" title="{{ t.region }}">{{ t.name }}{% if t.visited %} ✓{% endif %}</span>
+        <span class="parks-chip {% if t.visited %}is-visited{% endif %}" title="{{ t.region }}">{{ t.name }}{% if t.visited %} &#10003;{% endif %}</span>
       {% endfor %}
     </div>
   {% endif %}
 
   <p class="misc-tip-note">Terrain relief is illustrative (procedural shading), not survey-grade elevation.</p>
-  <p class="misc-back"><a href="{{ '/misc/' | relative_url }}">← Back to Field Notes</a></p>
+  <p class="fn-back"><a href="{{ '/misc/' | relative_url }}">&#8592;&nbsp; Back to Field Notes</a></p>
 
   <div class="parks-tip" data-parks-tip></div>
 </div>

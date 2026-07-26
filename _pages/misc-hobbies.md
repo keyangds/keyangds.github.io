@@ -3,33 +3,31 @@ permalink: /misc/hobbies/
 title: "Hobbies & Daily Life"
 excerpt: "A few things I love when I'm off the clock."
 author_profile: false
+uses_misc_hub_assets: true
 ---
 
 <div class="misc-root misc-hobbies">
-  <p class="misc-eyebrow">Off the clock</p>
-  <h1 class="misc-h1">Hobbies &amp; Daily Life</h1>
-  {% if site.data.hobbies.intro %}<p class="misc-lead">{{ site.data.hobbies.intro }}</p>{% endif %}
+  <header class="fn-head">
+    <p class="fn-eyebrow">Off the clock</p>
+    <h1 class="fn-title fn-title--sub">Hobbies &amp; Daily Life</h1>
+    {% if site.data.hobbies.intro %}<p class="fn-lead">{{ site.data.hobbies.intro }}</p>{% endif %}
+  </header>
 
-  <div class="misc-hob__grid">
+  <ol class="hob-list">
     {% for item in site.data.hobbies.items %}
-      <div class="misc-hob">
-        <span class="misc-hob__icon">{{ item.icon }}</span>
-        <div>
-          <h4>{{ item.title }}</h4>
-          <p>{{ item.blurb }}</p>
-        </div>
-      </div>
+      <li class="hob-item">
+        <span class="hob-item__no">{{ forloop.index | prepend: '0' | slice: -2, 2 }}</span>
+        <span class="hob-item__body">
+          <span class="hob-item__title"><span class="hob-item__icon" aria-hidden="true">{{ item.icon }}</span>{{ item.title }}</span>
+          <span class="hob-item__blurb">{{ item.blurb }}</span>
+        </span>
+      </li>
     {% endfor %}
-  </div>
+  </ol>
 
   {% if site.data.hobbies.currently and site.data.hobbies.currently.size > 0 %}
-    <div class="misc-now">
-      <span class="misc-now__label">Currently</span>
-      <span class="misc-now__items">
-        {% for c in site.data.hobbies.currently %}{{ c }}{% unless forloop.last %} &nbsp;·&nbsp; {% endunless %}{% endfor %}
-      </span>
-    </div>
+    <p class="hob-now"><span class="hob-now__label">Currently</span>{% for c in site.data.hobbies.currently %}{{ c }}{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
   {% endif %}
 
-  <p class="misc-back"><a href="{{ '/misc/' | relative_url }}">← Back to Field Notes</a></p>
+  <p class="fn-back"><a href="{{ '/misc/' | relative_url }}">&#8592;&nbsp; Back to Field Notes</a></p>
 </div>

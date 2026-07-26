@@ -5,6 +5,18 @@
 #   year  = optional
 # Edit titles/places freely — these were auto-filled from the filenames.
 
+- file: "2026_7_yellowstone.JPG"
+  title: "Grand Prismatic Spring"
+  place: "Yellowstone National Park"
+  year: 2026
+- file: "2026_7_teton.JPG"
+  title: "Schwabacher Landing"
+  place: "Grand Teton National Park"
+  year: 2026
+- file: "2026_7_slc.JPG"
+  title: "Ensign Peak"
+  place: "Salt Lake City"
+  year: 2026
 - file: "2026_6_gateway_arch.jpg"
   title: "Gateway Arch"
   place: "St Louis"
@@ -13,6 +25,10 @@
   title: "Old State House"
   place: "Boston"
   year: 2026
+- file: "2025_9_fargo.jpg"
+  title: "Fargo"
+  place: "North Dakota"
+  year: 2025
 - file: "2025_9_michigan.jpg"
   title: "Lake of the Clouds, Porcupine Mountains"
   place: "Michigan"

@@ -3,6 +3,24 @@
   margin-top: 1.25rem;
 }
 
+/* Match the reference typography (Lato) across the whole publications block.
+   Most text inherits from .publications-panel, but headings, inputs and
+   buttons have their own element-level font-family rules in the base theme,
+   so they are named explicitly here to win over inheritance. */
+.publications-panel,
+.publications-panel h1,
+.publications-panel h2,
+.publications-panel h3,
+.publications-panel h4,
+.publications-panel h5,
+.publications-panel h6,
+.publications-panel input,
+.publications-panel button,
+.publications-panel select,
+.publications-panel textarea {
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 /* ===== Filter Bar ===== */
 .publication-filters {
   margin-bottom: 1.75rem;
@@ -27,6 +45,7 @@
 
 .publication-filters__search input {
   width: 100%;
+  box-sizing: border-box;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 0.5rem 0.75rem 0.5rem 2.1rem;
@@ -122,11 +141,11 @@
 }
 
 .publication-card__media {
-  flex: 0 0 38%;
-  max-width: 38%;
-  min-width: 220px;
+  flex: 0 0 150px;
+  max-width: 150px;
+  min-width: 150px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -156,6 +175,49 @@
   flex-direction: column;
   gap: 0.35rem;
   justify-content: center;
+}
+
+/* Uniform vertical rhythm inside a card.
+   The theme applies a ~1.3em bottom margin to every <p> (via `.page__inner-wrap p`,
+   specificity 0,0,1,1), which the single-class `margin:0` below could not override —
+   so authors/venue/summary kept a stray ~23px gap while the <h3> title did not.
+   Reset all card text elements with higher specificity so ONLY the flex `gap`
+   (0.35rem) governs spacing → the gap above the venue now equals title↔authors. */
+.publications-panel .publication-card__title,
+.publications-panel .publication-card__authors,
+.publications-panel .publication-card__venue,
+.publications-panel .publication-card__links,
+.publications-panel .publication-card__summary {
+  margin: 0;
+}
+
+/* ===== Wide layout (borrowed from the reference site) =====
+   On large screens the homepage keeps a left profile sidebar, which squeezes
+   the content column to ~770px — too narrow for long titles to sit on one line.
+   Here the Publications section alone breaks out of that column into a wide
+   centered block (capped ~1180px, like the reference's ~1050px), while the
+   intro/news above keep their comfortable reading width. */
+/* Homepage only: this stylesheet is loaded solely where `uses_publications_assets`
+   is set (the homepage), so scoping the sidebar override here keeps every other
+   page's sidebar fixed. Let the left profile sidebar scroll away with the page
+   instead of staying pinned, so the Publications section can use the full width. */
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    position: relative;
+    height: auto;
+    overflow-y: visible;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .publications-section {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1240px, 100vw - 5rem);
+    box-sizing: border-box;
+  }
 }
 
 .publication-card__info {
@@ -238,7 +300,12 @@
     flex-direction: column;
   }
 
-  .publication-card__media,
+  .publication-card__media {
+    flex-basis: auto;
+    min-width: 0;
+    max-width: 100%;
+  }
+
   .publication-card__media img {
     max-width: 100%;
   }

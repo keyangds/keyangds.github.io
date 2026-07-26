@@ -140,6 +140,8 @@
   region: "Rockies"
   lat: 43.79
   lng: -110.68
+  visited: true
+  date: "July 2026"
 - name: "Great Basin"
   state: "NV"
   region: "Great Basin"
@@ -325,6 +327,8 @@
   region: "Rockies"
   lat: 44.6
   lng: -110.5
+  visited: true
+  date: "July 2026"
 - name: "Yosemite"
   state: "CA"
   region: "Sierra Nevada"

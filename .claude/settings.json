@@ -2,7 +2,26 @@
   "permissions": {
     "allow": [
       "Read(//tmp/**)",
-      "Read(//private/tmp/**)"
+      "Read(//private/tmp/**)",
+      "Bash(grep -n '$sans-serif\\\\|$serif\\\\|$system-fonts\\\\|-apple-system\\\\|BlinkMac\\\\|Helvetica\\\\|Roboto\\\\|Georgia\\\\|font' _sass/_themes.scss)",
+      "Bash(bundle config *)",
+      "Bash(lsof -nP -iTCP -sTCP:LISTEN)",
+      "Bash(ps -Ao pid,command)",
+      "Bash(command -v python3)",
+      "Bash(curl -s -o /dev/null -w \"GET / -> HTTP %{http_code}\\\\n\" http://127.0.0.1:4000/)",
+      "Bash(curl -s http://127.0.0.1:4000/)",
+      "Bash(curl -s -o /dev/null -w \"GET /assets/css/publications.css -> HTTP %{http_code}\\\\n\" http://127.0.0.1:4000/assets/css/publications.css)",
+      "Bash(curl -s http://127.0.0.1:4000/assets/css/publications.css)",
+      "Read(//Applications/Google Chrome.app/**)",
+      "Bash(command -v chromium-cli chromium google-chrome)",
+      "Read(//Users/keyangxuan/.cache/**)",
+      "Bash(cp homepage-preview.png crop-src.png)",
+      "Bash(sips --cropOffset 900 2230 --cropToHeightWidth 720 1300 crop-src.png --out pubs-crop.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight pubs-crop.png)",
+      "Bash(sed -n '/\\\\.publication-card__content {/,/}/p' assets/css/publications.css)",
+      "Bash(sed -n '/\\\\.publication-card__content {/,/}/p' _sass/custom/_custom.scss)",
+      "WebSearch",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://127.0.0.1:4000/misc/photos/)"
     ]
   }
 }
