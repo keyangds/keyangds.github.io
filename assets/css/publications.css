@@ -1,3 +1,11 @@
+/* ===== Homepage body copy (intro + Research Interest) =====
+   The theme scales the root font to 18px on wide screens, which is oversized
+   for running text. Target the DIRECT <p> children of .page__content — the
+   intro and Research Interest paragraphs. News (.news-board) and Publications
+   (.publications-section) sit inside their own wrappers (not direct children),
+   so they are not affected by this rule. */
+.page__content > p { font-size: 0.9rem; }
+
 /* ===== Publications Panel ===== */
 .publications-panel {
   margin-top: 1.25rem;

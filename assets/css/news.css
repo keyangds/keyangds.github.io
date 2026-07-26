@@ -54,7 +54,7 @@
 .news-card__date {
   display: inline;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   color: #6b7180;
   margin-right: 0.5em;
   white-space: nowrap;
@@ -66,7 +66,7 @@
 .news-card__summary {
   display: inline;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   line-height: 1.55;
   color: #3c4152;
 }
@@ -80,6 +80,13 @@
 .news-card__summary a:hover {
   color: #0d47a1;
   text-decoration: underline;
+}
+
+/* The theme's `.page__content p { font-size: 1em }` (specificity 0,0,1,1) would
+   otherwise outrank the summary's own size — scope with `.news-board` to win. */
+.news-board .news-card__date,
+.news-board .news-card__summary {
+  font-size: 0.72rem;
 }
 
 /* Scroll hint no longer applies */
@@ -122,8 +129,8 @@ html[data-theme="dark"] .news-card__summary a:hover {
 /* ----- Small screens ----- */
 @media (max-width: 640px) {
   .news-card,
-  .news-card__date,
-  .news-card__summary {
-    font-size: 0.86rem;
+  .news-board .news-card__date,
+  .news-board .news-card__summary {
+    font-size: 0.68rem;
   }
 }

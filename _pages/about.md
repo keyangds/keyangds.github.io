@@ -15,7 +15,7 @@ redirect_from:
  
  My research generally revolves around building intelligent agents with social and collaborative intelligence. In particular, I develop computational frameworks that enable language agents to **facilitate scientific discovery**, **adapt to complex social interactions**, and **operate under efficiency and safety constraints**.
 
- Before that, I spent four wonderful years at the University of Minnesota, where I had the privilege of working with [Vipin Kumar](https://scholar.google.com/citations?user=BnxU9TEAAAAJ&hl=en) and[Kangjie Lu](https://www-users.cse.umn.edu/~kjlu/).
+ Before that, I spent four wonderful years at the University of Minnesota, where I had the privilege of working with [Vipin Kumar](https://scholar.google.com/citations?user=BnxU9TEAAAAJ&hl=en) and [Kangjie Lu](https://www-users.cse.umn.edu/~kjlu/).
 
  I’m always enthusiastic about collaborating with researchers from diverse fields. If you’re interested in working together, please don’t hesitate to reach out.
 

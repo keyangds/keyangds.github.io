@@ -21,7 +21,8 @@
       "Bash(sed -n '/\\\\.publication-card__content {/,/}/p' assets/css/publications.css)",
       "Bash(sed -n '/\\\\.publication-card__content {/,/}/p' _sass/custom/_custom.scss)",
       "WebSearch",
-      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://127.0.0.1:4000/misc/photos/)"
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://127.0.0.1:4000/misc/photos/)",
+      "Bash(curl -s \"http://127.0.0.1:4000/assets/css/news.css\")"
     ]
   }
 }
