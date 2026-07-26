@@ -32,13 +32,13 @@
 .news-card {
   display: list-item;
   list-style: disc;
-  margin: 0 0 0.18rem;
+  margin: 0;
   padding: 0;
   border: none;
   background: none;
   border-radius: 0;
   box-shadow: none;
-  line-height: 1.5;
+  line-height: 1.35;
   color: #3c4152;
 }
 
