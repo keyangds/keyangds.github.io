@@ -72,13 +72,13 @@
 }
 
 .news-card__summary a {
-  color: #1a73e8;
+  color: #bf5700; /* UT Austin burnt orange */
   text-decoration: none;
   font-weight: 600;
 }
 
 .news-card__summary a:hover {
-  color: #0d47a1;
+  color: #8e4000;
   text-decoration: underline;
 }
 
@@ -119,11 +119,11 @@ html[data-theme="dark"] .news-card__summary {
 }
 
 html[data-theme="dark"] .news-card__summary a {
-  color: #3b9cff;
+  color: #ea8a45; /* burnt orange, lightened for dark bg */
 }
 
 html[data-theme="dark"] .news-card__summary a:hover {
-  color: #6bb4ff;
+  color: #f3a468;
 }
 
 /* ----- Small screens ----- */

@@ -1,3 +1,11 @@
+/* ===== Intro body links → UT Austin burnt orange =====
+   Only the direct <p> children of .page__content (the intro paragraphs); News
+   and Publications links are recolored in their own rules. */
+.page__content > p a { color: #bf5700; }
+.page__content > p a:hover { color: #8e4000; }
+html[data-theme="dark"] .page__content > p a { color: #ea8a45; }
+html[data-theme="dark"] .page__content > p a:hover { color: #f3a468; }
+
 /* ===== Homepage body copy (intro + Research Interest) =====
    The theme scales the root font to 18px on wide screens, which is oversized
    for running text. Target the DIRECT <p> children of .page__content — the
@@ -254,12 +262,12 @@
 }
 
 .publication-card__title a {
-  color: #1e40af;
+  color: #bf5700; /* UT Austin burnt orange */
   text-decoration: none;
 }
 
 .publication-card__title a:hover {
-  color: #1d4ed8;
+  color: #8e4000;
   text-decoration: underline;
 }
 
@@ -401,11 +409,11 @@ html[data-theme="dark"] .publication-card__category {
 }
 
 html[data-theme="dark"] .publication-card__title a {
-  color: #60a5fa;
+  color: #ea8a45; /* burnt orange, lightened for dark bg */
 }
 
 html[data-theme="dark"] .publication-card__title a:hover {
-  color: #93bbfd;
+  color: #f3a468;
 }
 
 html[data-theme="dark"] .publication-card__authors {
