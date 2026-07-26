@@ -9,13 +9,15 @@ redirect_from:
   - /about.html
 ---
 
-My name is Keyang Xuan and I'm a graduate student at Siebel School of Computing and Data Science, University of Illinois Urbana-Champaign, advised by Prof. [Jiaxuan You](https://cs.stanford.edu/people/jiaxuan/). I am also fortunate to work with Prof. [Tal August](https://talaugust.github.io/). My research generally revolves around building intelligent agents with social and collaborative intelligence. In particular, I develop computational frameworks that enable language agents to **facilitate scientific discovery**, **adapt to complex social interactions**, and **operate under efficiency and safety constraints**.
+ My name is Keyang Xuan, and I am an incoming PhD student in Computer Science at the University of Texas at Austin, where I am co-advised by by [Yizhong Wang](https://yizhong-wang.com/) and [Jiaxin Pei](https://jiaxin-pei.github.io/)
 
-Before joining UIUC, I spent four wonderful years at the University of Minnesota, where I was fortunate to work with Prof. [Vipin Kumar](https://scholar.google.com/citations?user=BnxU9TEAAAAJ&hl=en) and Prof. [Kangjie Lu](https://www-users.cse.umn.edu/~kjlu/).
+ I completed my master’s degree at the Siebel School of Computing and Data Science at the University of Illinois Urbana-Champaign, where I was advised by [Jiaxuan You](https://cs.stanford.edu/people/jiaxuan/). During my time at UIUC, I was also fortunate to work with [Tal August](https://talaugust.github.io/). I have also had the privilege of working with [Paul Pu Liang](https://pliang279.github.io/) at MIT.
+ 
+ My research generally revolves around building intelligent agents with social and collaborative intelligence. In particular, I develop computational frameworks that enable language agents to **facilitate scientific discovery**, **adapt to complex social interactions**, and **operate under efficiency and safety constraints**.
 
-Starting from Fall 2026, I will join UT Austin as a CS PhD student, co-advsied by Prof. [Yizhong Wang](https://yizhong-wang.com/) and Prof. [Jiaxin Pei](https://jiaxin-pei.github.io/)
+ Before that, I spent four wonderful years at the University of Minnesota, where I had the privilege of working with [Vipin Kumar](https://scholar.google.com/citations?user=BnxU9TEAAAAJ&hl=en) and[Kangjie Lu](https://www-users.cse.umn.edu/~kjlu/).
 
-I’m always enthusiastic about collaborating with researchers from diverse fields. If you’re interested in working together, please don’t hesitate to reach out.
+ I’m always enthusiastic about collaborating with researchers from diverse fields. If you’re interested in working together, please don’t hesitate to reach out.
 
 
 <h2 class="section-heading">
