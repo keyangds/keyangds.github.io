@@ -62,7 +62,6 @@ uses_misc_hub_assets: true
   {% endif %}
 
   <p class="misc-tip-note">Terrain relief is illustrative (procedural shading), not survey-grade elevation.</p>
-  <p class="fn-back"><a href="{{ '/misc/' | relative_url }}">&#8592;&nbsp; Back to Field Notes</a></p>
 
   <div class="parks-tip" data-parks-tip></div>
 </div>

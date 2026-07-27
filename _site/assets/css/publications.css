@@ -12,7 +12,7 @@ html[data-theme="dark"] .page__content > p a:hover { color: #f3a468; }
    intro and Research Interest paragraphs. News (.news-board) and Publications
    (.publications-section) sit inside their own wrappers (not direct children),
    so they are not affected by this rule. */
-.page__content > p { font-size: 0.9rem; }
+.page__content > p { font-size: 0.9rem; margin-bottom: 0.7em; }
 
 /* ===== Publications Panel ===== */
 .publications-panel {

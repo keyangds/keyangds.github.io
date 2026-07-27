@@ -28,6 +28,4 @@ uses_misc_hub_assets: true
   {% if site.data.hobbies.currently and site.data.hobbies.currently.size > 0 %}
     <p class="hob-now"><span class="hob-now__label">Currently</span>{% for c in site.data.hobbies.currently %}{{ c }}{% unless forloop.last %} · {% endunless %}{% endfor %}</p>
   {% endif %}
-
-  <p class="fn-back"><a href="{{ '/misc/' | relative_url }}">&#8592;&nbsp; Back to Field Notes</a></p>
 </div>

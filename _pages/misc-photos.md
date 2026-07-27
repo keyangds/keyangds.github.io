@@ -39,8 +39,6 @@ uses_misc_hub_assets: true
       <p>No photographs here yet. Drop image files into <code>images/travel/</code>, then list them in <code>_data/travel_photos.yml</code> to fill this gallery.</p>
     </div>
   {% endif %}
-
-  <p class="fn-back"><a href="{{ '/misc/' | relative_url }}">&#8592;&nbsp; Back to Field Notes</a></p>
 </div>
 
 <div class="misc-lightbox" data-lightbox hidden>
