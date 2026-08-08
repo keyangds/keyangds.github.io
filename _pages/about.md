@@ -9,7 +9,7 @@ redirect_from:
   - /about.html
 ---
 
- My name is Keyang Xuan, and I am an incoming PhD student in Computer Science at the University of Texas at Austin, where I am co-advised by by [Yizhong Wang](https://yizhong-wang.com/) and [Jiaxin Pei](https://jiaxin-pei.github.io/)
+ My name is Keyang Xuan, and I am an incoming PhD student in Computer Science at the University of Texas at Austin, where I am co-advised by [Yizhong Wang](https://yizhong-wang.com/) and [Jiaxin Pei](https://jiaxin-pei.github.io/)
 
  I completed my master’s degree at the Siebel School of Computing and Data Science at the University of Illinois Urbana-Champaign, where I was advised by [Jiaxuan You](https://cs.stanford.edu/people/jiaxuan/). During my time at UIUC, I was also fortunate to work with [Tal August](https://talaugust.github.io/). I have also had the privilege of working with [Paul Pu Liang](https://pliang279.github.io/) at MIT.
  
