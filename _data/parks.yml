@@ -284,6 +284,8 @@
   region: "Sierra Nevada"
   lat: 36.49
   lng: -118.57
+  visited: true
+  date: "October 2026"
 - name: "Shenandoah"
   state: "VA"
   region: "Appalachia"
