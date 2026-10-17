@@ -13,9 +13,9 @@
     var GAP = 12;
 
     function targetHeight(w) {
-      if (w >= 1100) return 280;
-      if (w >= 820) return 250;
-      return 210;
+      if (w >= 1100) return 400;
+      if (w >= 820) return 340;
+      return 260;
     }
 
     function layout() {
